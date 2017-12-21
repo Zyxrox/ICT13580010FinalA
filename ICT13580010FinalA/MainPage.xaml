@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580010FinalA.MainPage"
+    Title="Jam Corp">
+	<ContentPage.ToolbarItems>
+        
+        <ToolbarItem
+            Text="New"
+            x:Name="newButton"/>
+        
+    </ContentPage.ToolbarItems>
+
+    <ListView
+        x:Name="employeeListView"
+        RowHeight="500">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+
+                    <ViewCell.ContextActions>
+                        <MenuItem
+                            Text="Edit"
+                            CommandParameter="{Binding .}"
+                            Clicked="Edit_Clicked"/>
+
+                        <MenuItem
+                            Text="Delete"
+                            CommandParameter="{Binding .}"
+                            IsDestructive="true"
+                            Clicked="Delete_Clicked"/>
+                    </ViewCell.ContextActions>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                    
+
+                        <Image
+                            VerticalOptions="Start"
+                            BackgroundColor="Transparent"
+                            HeightRequest="100"
+                            Source="bill.jpg"/>
+
+                        <StackLayout
+                            Grid.Column="1">
+
+                            <Label
+                                Text="{Binding Name}"
+                                FontAttributes="Bold"
+                                TextColor="Green"/>
+
+                            <Label
+                                Text="{Binding Age, StringFormat='{0} Years Old'}"/>
+
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Department: "/>
+
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Tel. Number:"/>
+
+                            <Label
+                                Text="{Binding Address}"/>
+                            
+                            <Label
+                                FontAttributes="Bold"
+                                TextColor="Green"
+                                Text="{Binding Status}"/>
+
+                            <Label
+                                Text="{Binding Child, StringFormat='Has {0} Children'}"/>
+                            
+                                  
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Column="2">
+                            <Label
+                                
+                                Text="{Binding SurName}"
+                                    FontAttributes="Bold"
+                                    TextColor="Green"/>
+
+                            <Label
+                                TextColor="Blue"
+                                FontAttributes="Bold"
+                                Text="{Binding Sex}"/>
+                            
+                            <Label
+                                Text="{Binding Department}"/>
+
+                            <Label
+                                Text="{Binding Tel}"/>
+                            
+                            <Label
+                                Text="{Binding Salary, StringFormat='Salary: {0} Baht'}"/>
+                        </StackLayout>
+
+                    </Grid>
+                    
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+    
+</ContentPage>
+

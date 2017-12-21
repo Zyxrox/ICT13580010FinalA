@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580010FinalA.EmployeeNewPage">
+
+    <ScrollView>
+        <StackLayout
+            Margin="20">
+
+            <Label 
+                x:Name="titleLabel"
+                TextColor="Red"
+                FontSize="22"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="New Employee"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Column="0">
+
+                    <Label
+                        TextColor="Purple"
+                        Text="First Name"/>
+
+                    <Entry  
+                        HeightRequest="25"
+                        Keyboard="Text"
+                        x:Name="nameEntry"/>
+                    
+                </StackLayout>
+               
+               <StackLayout
+                    Grid.Column="1">
+
+                    <Label
+                        TextColor="Purple"
+                        Text="Last Name"/>
+
+                    <Entry
+                        HeightRequest="25"
+                        x:Name="lastNameEntry"
+                        Keyboard="Text"/>
+                    
+                </StackLayout>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Column="0">
+
+                    <Label
+                        TextColor="Purple"
+                        Text="Age"/>
+
+                    <Entry
+                        Keyboard="Numeric"
+                        x:Name="ageEntry"/>
+
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="1">
+
+                    <Label
+                        TextColor="Purple"
+                        Text="Gender"/>
+
+                    <Picker 
+                        Title="Select Gender"
+                        x:Name="genderPicker"/>
+
+                </StackLayout>
+                
+            </Grid>
+
+            <Label
+                TextColor="Purple"
+                Text="Department"/>
+
+            <Picker 
+                Title="Select Department"
+                x:Name="departmentPicker"/>
+
+            <Label
+                TextColor="Purple"
+                Text="Phone Number"/>
+
+            <Entry  
+                HeightRequest="30"
+                Keyboard="Numeric"
+                x:Name="telEntry"/>
+
+            <Label
+                TextColor="Purple"
+                Text="Email Address"/>
+
+            <Entry  
+                HeightRequest="30"
+                Keyboard="Text"
+                x:Name="emailEntry"/>
+
+            <Label
+                TextColor="Purple"
+                Text="Address"/>
+
+            <Editor  
+                TextColor="Black"
+                BackgroundColor="Silver"
+                Keyboard="Text"
+                x:Name="addressEditor"
+                HeightRequest="100"/>
+
+            <Label
+                TextColor="Purple"
+                Text="Marital Status"/>
+
+            <Picker  
+                HeightRequest="30"
+                Title="Select Marital Status"
+                x:Name="statusPicker"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Column="0">
+                    <Label
+                        TextColor="Purple"
+                        Text="Number of Children"/>
+
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="1">
+                
+                    <Label
+                        TextColor="Blue"
+                        x:Name="childLabel"
+                        Text="0"/>
+
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="2">
+                
+                    <Stepper
+                    x:Name="childStepper"
+                    Minimum="0"
+                    Maximum="20"
+                    Value="0"
+                    Increment="1"/>
+
+                </StackLayout>
+                
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Column="0">
+                    <Label
+                        TextColor="Purple"
+                        Text="Salary Income"/>
+
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="1">
+                
+                    <Label
+                        TextColor="Blue"
+                        x:Name="salaryLabel"
+                        Text="0"/>
+
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="2">
+                
+                    <Label
+                        TextColor="Blue"
+                        Text="Baht"/>
+
+                </StackLayout>
+
+
+            </Grid>
+
+            <Slider
+                x:Name="salarySlider"
+                Maximum="100000"
+                Minimum="0"
+                Value="15000"/>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    x:Name="cancelButton"
+                    Text="Cancel"
+                    Grid.Column="0"
+                    TextColor="Red"/>
+
+                <Button
+                    TextColor="Green"
+                    x:Name="saveButton"
+                    Text="Submit"
+                    Grid.Column="1"/>
+
+            </Grid>
+
+            
+
+        </StackLayout>
+    </ScrollView>
+        
+    
+</ContentPage>
