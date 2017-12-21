@@ -14,7 +14,7 @@
 
     <ListView
         x:Name="employeeListView"
-        RowHeight="300">
+        RowHeight="200">
 
         <ListView.ItemTemplate>
             <DataTemplate>
